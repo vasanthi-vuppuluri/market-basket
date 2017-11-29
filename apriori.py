@@ -90,8 +90,11 @@ class Apriori:
         for item_set in frequent_item_list_2:
           self.frequent_item_sets[item_set_length][item_set] += 1
 
+      # Update frequent item-sets
       self.frequent_item_sets[item_set_length] = self._get_frequent_itemsets(item_set_length)
 
+      # Write frequent item-set size, co-occurrence frequency and SKUs in the
+      # item-set to the output file iff item-set size >= minimum item-set size specified
       with open(self.output_file_path, 'a') as output_file:
         if item_set_length >= self.min_itemset_size:
           for item_set, frequency in sorted(self.frequent_item_sets[item_set_length].items(),
