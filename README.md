@@ -1,6 +1,7 @@
 # Market Basket Analysis
 
 A Python3 implementation of market basket analysis on transaction data.
+
 Reference: http://paulallen.ca/apriori-algorithm-generating-candidate-fis/
 
 ###### Input:
@@ -16,7 +17,9 @@ A text file with one transaction per line. Each transaction is a space seperated
 ###### Output:
 An output file with the info of one frequent item-set per line.
 Each line is of the following format,
-> <item set size (N)>, <co-occurrence frequency>, <item 1 id >, <item 2 id>, …. <item N id>
+```buildoutcfg
+<item set size (N)>, <co-occurrence frequency>, <item 1 id >, <item 2 id>, …. <item N id>
+``` 
 
 ###### How to run
 For detailed help, 
